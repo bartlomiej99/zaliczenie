@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Polska Liga Podwórkowa Koszykówki</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+</head>
+<body>
+    <h1>Witaj {{ user.username }} na stronie, gdzie możesz stworzyć własną drużynę i zacząć uczestniczyć w turniejach juz dziś!</h1>
+        {% if not user.username %}
+        <button><a href="/add-user">Zarejestruj</a></button>
+        <button><a href="/login/">Zaloguj</a></button>
+        {% endif %}
+        {% if user.username %}
+            <a href="/statistics/">Statystyki</a>
+            <a href="/team/">Drużyny</a>
+            <a href="/tournament/">Turnieje</a>
+            <a href="/table/">Tabela turnieju</a>
+            <a href="/stadium-history/">Historia meczy</a>
+    <ul>
+        <li><a href="/">Strona główna</a></li>
+        <li><a href="/logout/">Wyloguj</a></li>
+        <li><a href="/edit-account/">Edytuj profil</a></li>
+    </ul>
+        {% block content %}{% endblock %}
+        {% endif %}
+    <img src="/static/koszykarz.jpg" alt="Koszykarz robiący wsad">
+</body>
+<footer>
+    <a href="https://www.polsatsport.pl/dyscyplina/koszykowka/">Wiadomości ze świata koszykówki</a>
+</footer>
+</html>

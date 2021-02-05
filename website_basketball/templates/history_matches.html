@@ -1,0 +1,24 @@
+{% extends "home_page.html" %}
+{% block content %}
+<ul>
+    <li><a href="/stadium-match-create/">Zapisz rozgrywkę</a></li>
+    <li><a href="/stadium-create/">Stwórz stadion</a></li>
+</ul>
+    <h2>Wyszukaj mecz w historii</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Znajdź">
+
+    </form>
+        <h1>{{ info }}</h1>
+        <h2>{{ stadium.name }}</h2>
+
+        <li>
+            <b>Drużyna:</b> {{ team.team_name }}
+        </li>
+        <li>
+            <b>Data rozegrania spotkania:</b>{{ stadium.date }}
+        </li>
+
+{% endblock %}

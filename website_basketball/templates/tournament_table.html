@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="table.css">
+    <title>Tabela turnieju</title>
+</head>
+<body>
+
+      <div class="tournament">
+    <!-- tournament logo -->
+    <div class="tournament__logo-container tournament__logo-container--right">
+      <strong class="tournament__logo tournament__logo--gold"></strong>
+    </div>
+    <div class="tournament__grid">
+      <!-- tournament__round 1/8 -->
+      <div class="tournament__round tournament__round--first-round">
+        <div class="tournament__match">
+          <a class="tournament__match__team" href="#">{{ team.name }}</a>
+          <a class="tournament__match__team" href="#">{{ team.name }}</a>
+        </div>
+        <div class="tournament__match">
+          <a class="tournament__match__team" href="#">{{ team.name }}</a>
+          <a class="tournament__match__team" href="#">{{ team.name }}</a>
+        </div>
+        <div class="tournament__match">
+          <a class="tournament__match__team" href="#">{{ team.name }}</a>
+          <a class="tournament__match__team" href="#">{{ team.name }}</a>
+        </div>
+        <div class="tournament__match">
+          <a class="tournament__match__team" href="#">{{ team.name }}</a>
+          <a class="tournament__match__team" href="#">{{ team.name }}</a>
+        </div>
+        <div class="tournament__match">
+          <a class="tournament__match__team" href="#">{{ team.name }}</a>
+          <a class="tournament__match__team" href="#">{{ team.name }}</a>
+        </div>
+        <div class="tournament__match">
+          <a class="tournament__match__team" href="#">{{ team.name }}</a>
+          <a class="tournament__match__team" href="#">{{ team.name }}</a>
+        </div>
+        <div class="tournament__match">
+          <a class="tournament__match__team" href="#">{{ team.name }}</a>
+          <a class="tournament__match__team" href="#">{{ team.name }}</a>
+        </div>
+        <div class="tournament__match">
+          <a class="tournament__match__team" href="#">{{ team.name }}</a>
+          <a class="tournament__match__team" href="#">{{ team.name }}</a>
+        </div>
+      </div>
+      <!-- tournament__round 1/4 -->
+      <div class="tournament__round tournament__round--first-round">
+        <div class="tournament__match">
+          <a class="tournament__match__team" href="#">{{ team_stage_2.name }}</a>
+          <a class="tournament__match__team" href="#">{{ team_stage_2.name }}</a>
+        </div>
+        <div class="tournament__match">
+          <a class="tournament__match__team" href="#">{{ team_stage_2.name }}</a>
+          <a class="tournament__match__team" href="#">{{ team_stage_2.name }}</a>
+        </div>
+        <div class="tournament__match">
+          <a class="tournament__match__team" href="#">{{ team_stage_2.name }}</a>
+          <a class="tournament__match__team" href="#">{{ team_stage_2.name }}</a>
+        </div>
+        <div class="tournament__match">
+          <a class="tournament__match__team" href="#">{{ team_stage_2.name }}</a>
+          <a class="tournament__match__team" href="#">{{ team_stage_2.name }}</a>
+        </div>
+      </div>
+
+      <!-- tournament__round 1/2 -->
+      <div class="tournament__round">
+        <div class="tournament__match">
+          <a class="tournament__match__team" href="#">{{ team_stage_3.name }}</a>
+          <a class="tournament__match__team" href="#">{{ team_stage_3.name }}</a>
+        </div>
+        <div class="tournament__match">
+          <a class="tournament__match__team" href="#">{{ team_stage_3.name }}</a>
+          <a class="tournament__match__team" href="#">{{ team_stage_3.name }}</a>
+        </div>
+      </div>
+
+      <!-- tournament__round final -->
+      <div class="tournament__round tournament__round--final">
+        <div class="tournament__match">
+          <a class="tournament__match__team" href="#">{{ team_final.name }}</a>
+          <a class="tournament__match__team" href="#">{{ team_final.name }}</a>
+        </div>
+      </div>
+
+      <!-- tournament__round winner -->
+      <div class="tournament__round tournament__round--winner">
+        <div class="tournament__match">
+          <a class="tournament__match__team" href="#">{{ team_win.name }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</body>
+</html>

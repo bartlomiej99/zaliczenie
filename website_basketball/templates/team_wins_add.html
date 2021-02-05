@@ -1,0 +1,10 @@
+{% extends "home_page.html" %}
+{% block content %}
+<h2>Dodaj zwycięstwo drużyny</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Dodaj wygraną" name="add_win">
+        {{ info }}
+    </form>
+{% endblock %}

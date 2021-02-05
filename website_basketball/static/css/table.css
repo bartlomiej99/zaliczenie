@@ -1,0 +1,174 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.cf:before,
+.cf:after{
+	display: table;
+	content: " ";
+}
+.cf:after{
+	clear: both;
+}
+.container{
+	width: 100%;
+	margin: 0 auto;
+}
+@media (min-width: 1000px){
+.header{
+	background-color: #78CDD7;
+	min-height: 100vh;
+}
+.menu{
+	float: left;
+	width: 5%;
+	height: auto;
+	cursor: pointer;
+}
+.cross{
+	float: left;
+	display: none;
+	width: 5%;
+	height: auto;
+	cursor: pointer;
+}
+.nav{
+	display: none;
+	position: relative;
+	float: left;
+	width: 20%;
+	height: 100vh;
+}
+.nav ul{
+	width: 100%;
+	height: 100vh;
+	list-style-type: none;
+}
+.nav ul li{
+	width: 100%;
+	min-height: 20vh;
+	background-color: #FFFFFA;
+}
+.nav ul li a{
+	display: block;
+	padding: 8vh 3%;
+	text-decoration: none;
+	color: #0D5C63;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.5vw;
+	font-weight: bold;
+}
+.nav ul li a:hover{
+	color: #FFFFFA;
+}
+.nav ul li:hover{
+	background-color: #44A1A0;
+}
+.nav ul li:nth-child(even){
+	background-color: #DDDDD8;
+}
+.nav ul li:nth-child(even):hover{
+	background-color: #44A1A0;
+}
+.nav ul li:nth-child(2):hover{
+	background: url("../img/csgo.jpg") center/cover no-repeat;
+}
+.nav ul li:nth-child(3):hover{
+	background: url("../img/lol.jpg") center/cover no-repeat;
+}
+.header h1{
+	width: 40%;
+	background-color: rgba(13,92,99, 0.8);
+	margin-top: 32vh;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	text-align: center;
+	font-size: 4vw;
+	color: #FFFFFA;
+	letter-spacing: 4px;
+	font-family: 'Alfa Slab One', cursive;
+}
+.header p{
+	width: 45%;
+	background-color: rgba(36,123,123, 0.8);
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	text-align: center;
+	font-size: 3vw;
+	color: #FFFFFA;
+	font-family: 'Alfa Slab One', cursive;
+}
+}
+@media(max-width: 1000px){
+.header{
+	background-color: #78CDD7;
+	min-height: 100vh;
+}
+.menu{
+	position: relative;
+	float: right;
+	width: 12%;
+	height: auto;
+	cursor: pointer;
+}
+.cross{
+	position: relative;
+	float: right;
+	display: none;
+	width: 12%;
+	height: auto;
+	cursor: pointer;
+}
+.nav{
+	position: absolute;
+	display: none;
+	width: 100%;
+	min-height: 55vh;
+	background-color: #FFFFFA;
+}
+.nav ul{
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	list-style-type: none;
+}
+.nav ul li{
+	padding: 3vh 0;
+}
+.nav ul li a{
+	color: #000000;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	font-size: 3vw;
+}
+.header h1{
+	width: 80%;
+	background-color: rgba(13,92,99, 0.8);
+	margin-top: 35vh;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	text-align: center;
+	font-size: 8vw;
+	color: #FFFFFA;
+	letter-spacing: 4px;
+	font-family: 'Alfa Slab One', cursive;
+}
+.header p{
+	width: 90%;
+	background-color: rgba(36,123,123, 0.8);
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	text-align: center;
+	font-size: 6vw;
+	color: #FFFFFA;
+	font-family: 'Alfa Slab One', cursive;
+}
+}

@@ -1,0 +1,22 @@
+{% extends "home_page.html" %}
+{% block content %}
+    <body>
+    <ul>
+        <li>
+            <a href="/tournament-create/">Stwórz turniej</a>
+        </li>
+    </ul>
+
+        <ul>
+            {% for t in tournament %}
+            <li>
+                {{ t.name }}
+                    {% for team in t.team_set.all %}
+                        <b>-</b> {{ team.team_name }}
+                    {% endfor %}
+            </li>
+            {% endfor %}
+            {{ info }}
+        </ul>
+    </body>
+{% endblock %}

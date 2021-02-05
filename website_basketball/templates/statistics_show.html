@@ -1,0 +1,23 @@
+{% extends "home_page.html" %}
+{% block content %}
+    <body>
+    <ul>
+        <li><a href="/statistics-create/">Stwórz statystyki</a></li>
+    </ul>
+
+        <ul>
+            {% for static in statistics %}
+            <li>
+                {{ static.team }}
+                {{ static.matches_played }}
+                {{ static.total_points }}
+                {{ static.total_wins }}
+                    {% for s in static.stadium_set.all %}
+                        {{ s.statistics }}
+                    {% endfor %}
+            </li>
+            {% endfor %}
+            {{ info }}
+        </ul>
+    </body>
+{% endblock %}

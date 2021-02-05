@@ -1,0 +1,26 @@
+{% extends "home_page.html" %}
+{% block content %}
+<title>Statystyki</title>
+
+    <body>
+    <ul>
+        <li><a href="/team-create/">Stwórz drużynę</a></li>
+        <li><a href="/team-wins-add/">Dodaj wygraną drużyny</a></li>
+        <li><a href="/player-add/">Dodaj członka drużyny</a></li>
+        <li><a href="/player-delete/">Usuń członka drużyny</a></li>
+    </ul>
+        <ul>
+            {% for t in team %}
+            <li>
+                {{ t.team_name }}
+                {{ t.points_in_tournament }}
+                    {% for p in t.player_set.all %} <!-- Pętla która pokazuje nazwy graczy -->
+                        {{ p.first_name }}
+                    {% endfor %}
+                {{ t.wins }}
+            </li>
+            {% endfor %}
+            {{ info }}
+        </ul>
+    </body>
+{% endblock %}

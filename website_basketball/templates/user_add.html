@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rejestracja</title>
+</head>
+<body>
+    <h1>Witaj {{ user.username }} na stronie gdzie możesz stworzyć własną drużynę i zacząć uczestniczyć w turniejach juz dziś!</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Zarejestruj">
+        {{ info }}
+    </form>
+</body>
+</html>
